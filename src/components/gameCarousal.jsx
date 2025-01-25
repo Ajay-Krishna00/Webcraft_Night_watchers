@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Button, Image, Flex, Text,  } from '@chakra-ui/react';
+import { Box, Button, Image, Flex, Text, } from '@chakra-ui/react';
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,15 +33,18 @@ const Carousel = () => {
   };
 
   return (
-    <Box position="relative" maxWidth="100vw" height={'90vh'} margin="auto" overflow="hidden"
-    display={'flex'} justifyContent={'center'} alignItems={'center'} gap>
+    <Box position="relative" maxWidth="100vw" h={'100vh'} margin="auto" overflow="hidden"
+    display={'flex'} justifyContent={'center'} alignItems={'center'} pt={"80px"} >
       <Button
           onClick={prevSlide}
           variant="solid"
-          colorScheme="teal"
+          color="black"
           borderRadius="full"
-          size="lg"
-        >
+        size="lg"
+        position="absolute"
+        left="0"
+      >
+        <FaChevronLeft />
         </Button>
       <Image
         src={slides[currentSlide].img}
@@ -52,8 +57,8 @@ const Carousel = () => {
       
       <Flex
         position="absolute"
-        bottom="15%"
-        left="35%"
+        bottom="10%"
+        left="40%"
         color="white"
         flexDirection="column"
         alignItems="center"
@@ -68,10 +73,13 @@ const Carousel = () => {
         <Button
           onClick={nextSlide}
           variant="solid"
-          colorScheme="teal"
+          color="black"
           borderRadius="full"
-          size="lg"
-        >
+        size="lg"
+        position="absolute"
+        right="0"
+      >
+        <FaChevronRight />
         </Button>
     </Box>
   );
