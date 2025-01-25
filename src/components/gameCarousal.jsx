@@ -41,7 +41,9 @@ const Carousel = () => {
     <Box position="relative" maxWidth="100vw" h={'89vh'} margin="auto" overflow="hidden"
     display={'flex'} justifyContent={'center'} alignItems={'center'}  >
       <Button
-          onClick={prevSlide}
+        onClick={prevSlide}
+        
+        width={'30px'}
           variant="solid"
           color="black"
           borderRadius="full"
@@ -80,7 +82,8 @@ const Carousel = () => {
       
         
         <Button
-          onClick={nextSlide}
+        onClick={nextSlide}
+        width={'20px'}
           variant="solid"
           color="black"
           borderRadius="full"

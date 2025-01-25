@@ -18,7 +18,7 @@ const Login = ({ setShowLogin }) => {
           <img
             onClick={handleClose}
             src={<IoMdClose/>}
-            alt="Close"
+            alt="X"
             className="cursor-pointer"
           />
         </div>
