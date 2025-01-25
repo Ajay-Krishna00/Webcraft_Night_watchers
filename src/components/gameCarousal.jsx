@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Image, Flex, Text, } from '@chakra-ui/react';
+import { Box, Button, Image, Flex, Text, Center, } from '@chakra-ui/react';
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 
@@ -8,19 +8,24 @@ const Carousel = () => {
 
   const slides = [
     {
-      img: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg',
-      caption: 'First Slide Caption',
-      description: 'This is a description of the first slide.',
+      img: 'https://cdn.wccftech.com/wp-content/uploads/2021/06/ER_KEY-ART-scaled-e1623411764381.jpg',
+      caption: 'The Lands Between Awaits',
+      description: 'Venture into the mysterious and perilous world of Elden Ring, where dark secrets, ancient gods, and brutal enemies lie in wait. Forge your path as a Tarnished and battle your way through vast landscapes and daunting dungeons in search of the Elden Ring, the key to restoring the world.',
     },
     {
-      img: 'https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      caption: 'Second Slide Caption',
-      description: 'This is a description of the second slide.',
+      img: 'https://assets2.ignimgs.com/2014/11/17/gta-v-bigjpg-e94b8d1280wjpg-e14d62_160w.jpg?width=1280',
+      caption: 'Welcome to Los Santos',
+      description: 'A sprawling, sun-drenched city filled with high-speed chases, adrenaline-pumping heists, and a world of endless possibilities. Explore the streets of Los Santos, where danger lurks at every corner, and fortune awaits the daring.',
     },
     {
-      img: 'https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600',
-      caption: 'Third Slide Caption',
-      description: 'This is a description of the third slide.',
+      img: 'https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/19874924/VALORANT_Jett_Red_crop.jpg?quality=90&strip=all&crop=13.957157090668,0,72.085685818665,100',
+      caption: 'The Battle for the Future Begins',
+      description: 'Enter the world of Valorant, where precision meets strategy in a high-stakes tactical shooter. Join a team of unique agents, each with powerful abilities, and fight to control critical sites. Every move counts in this fast-paced game of skill, teamwork, and deception.',
+    },
+    {
+      img: 'https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/aqZdSwWyy9JcQ66BxHDKrky6.jpg',
+      caption: 'A Journey of Gods and Titans',
+      description: 'Embark on an epic adventure with Kratos and his son Atreus as they navigate the realms of Norse mythology. Face fierce gods, legendary monsters, and explore breathtaking landscapes while uncovering the secrets of their past.',
     },
   ];
 
@@ -33,8 +38,8 @@ const Carousel = () => {
   };
 
   return (
-    <Box position="relative" maxWidth="100vw" h={'100vh'} margin="auto" overflow="hidden"
-    display={'flex'} justifyContent={'center'} alignItems={'center'} pt={"80px"} >
+    <Box position="relative" maxWidth="100vw" h={'89vh'} margin="auto" overflow="hidden"
+    display={'flex'} justifyContent={'center'} alignItems={'center'}  >
       <Button
           onClick={prevSlide}
           variant="solid"
@@ -57,16 +62,20 @@ const Carousel = () => {
       
       <Flex
         position="absolute"
-        bottom="10%"
-        left="40%"
+        bottom="5%"
+        maxW={'50%'}
         color="white"
         flexDirection="column"
         alignItems="center"
+        backdropFilter="blur(10px)" 
+        backgroundColor="rgba(0, 0, 0, 0.5)" 
+        borderRadius="md"  
+  padding="3"
       >
-        <Text fontSize="3xl" fontWeight="bold">
+        <Text fontSize="4xl" fontWeight="bold">
           {slides[currentSlide].caption}
         </Text>
-        <Text fontSize="lg">{slides[currentSlide].description}</Text>
+        <Text fontSize="lg" justifyContent={"center"}>{slides[currentSlide].description}</Text>
       </Flex>
       
         
