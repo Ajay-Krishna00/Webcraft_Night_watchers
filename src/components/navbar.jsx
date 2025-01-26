@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa"; // Import React Icons
+import { Link } from "react-router-dom";
+import GamePage from "../GamePage.jsx";
 
 function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -47,7 +49,6 @@ function Navbar() {
           }}
         >
           <input
-          
             type="text"
             placeholder="Search..."
             style={{
@@ -61,7 +62,6 @@ function Navbar() {
               boxSizing: "border-box",
             }}
           />
-          
         </div>
 
         {/* Navbar Right Section (Login and Dark/Light Toggle) */}
@@ -100,20 +100,22 @@ function Navbar() {
           </button>
 
           {/* Our Games Button */}
-          <button
-            style={{
-              padding: "8px 16px",
-              backgroundColor: "#9b56c1",
-              color: "#ffffff",
-              borderRadius: "9999px",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              transition: "background-color 0.3s",
-            }}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#7e4ea3")}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = "#9b56c1")}
-          >
-            Our Games
-          </button>
+          <Link to="/games">
+            <button
+              style={{
+                padding: "8px 16px",
+                backgroundColor: "#9b56c1",
+                color: "#ffffff",
+                borderRadius: "9999px",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                transition: "background-color 0.3s",
+              }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#7e4ea3")}
+              onMouseLeave={(e) => (e.target.style.backgroundColor = "#9b56c1")}
+            >
+              Our Games
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
