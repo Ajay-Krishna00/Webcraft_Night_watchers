@@ -6,14 +6,14 @@ import Login from './components/Login.jsx';
 import { useState } from 'react';
 
 function App() {
-const [showLogin, setShowLogin] = useState(true);
+const [showLogin, setShowLogin] = useState(false);
 
   
   return (
     <>
       <div>{showLogin && <Login setShowLogin={setShowLogin} />}</div>
       <ChakraProvider theme={theme}>
-        <Navbar />
+        <Navbar setShowLogin={setShowLogin}/>
         <GameCarousal />
         
       </ChakraProvider>

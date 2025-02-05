@@ -60,6 +60,7 @@ const Carousel = () => {
         height="100%"
         borderRadius="md"
         transition="transform 1s ease"
+        
       />
       
       <Flex

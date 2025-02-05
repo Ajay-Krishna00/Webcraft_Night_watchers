@@ -15,12 +15,9 @@ const Login = ({ setShowLogin }) => {
       <form className="login-popup-container">
         <div className="login-popup-title">
           <h2>{currentState}</h2>
-          <img
-            onClick={handleClose}
-            src={<IoMdClose/>}
-            alt="X"
-            className="cursor-pointer"
-          />
+          <button onClick={handleClose} className="cursor-pointer">
+  <IoMdClose />
+</button>
         </div>
         <div className="login-popup-inputs">
           {currentState === "Login" ? null : (

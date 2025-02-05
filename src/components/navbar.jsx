@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa"; // Import React Icons
 
-function Navbar() {
+function Navbar({setShowLogin}) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Toggle dark/light theme
@@ -78,6 +78,7 @@ function Navbar() {
             }}
             onMouseEnter={(e) => (e.target.style.backgroundColor = "#3182ce")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#4299e1")}
+            onClick={() => setShowLogin(true)}
           >
             Login
           </button>
