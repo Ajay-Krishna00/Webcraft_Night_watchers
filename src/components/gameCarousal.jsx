@@ -58,7 +58,6 @@ const Carousel = () => {
         alt={`Slide ${currentSlide + 1}`}
         width="100%"
         height="100%"
-        borderRadius="md"
         transition="transform 1s ease"
         
       />

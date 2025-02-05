@@ -11,7 +11,7 @@ const [showLogin, setShowLogin] = useState(false);
   
   return (
     <>
-      <div>{showLogin && <Login setShowLogin={setShowLogin} />}</div>
+      <div>{showLogin && <Login setShowLogin={setShowLogin} />}</div>
       <ChakraProvider theme={theme}>
         <Navbar setShowLogin={setShowLogin}/>
         <GameCarousal />
