@@ -11,10 +11,10 @@ const [showLogin, setShowLogin] = useState(true);
   
   return (
     <>
-      <div>{showLogin && <Login setShowLogin={setShowLogin} />}</div>
+      <div>{showLogin && <Login setShowLogin={setShowLogin} />}</div>
       <ChakraProvider theme={theme}>
         <Navbar />
-        <GameCarousal />
+      <GameCarousal />
         
       </ChakraProvider>
     </>
